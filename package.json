@@ -4,7 +4,9 @@
   "description": "CouchDB listeners for HospitalRun",
   "main": "index.js",
   "scripts": {
-    "test": "jscs *.js dblisteners/*.js userdb-listeners/*.js"
+    "test": "snyk test && jscs *.js dblisteners/*.js userdb-listeners/*.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,8 @@
     "follow": "^0.12.1",
     "glob": "^7.0.0",
     "mkdirp": "^0.5.1",
-    "nano": "^6.2.0"
-  }
+    "nano": "^6.2.0",
+    "snyk": "^1.13.2"
+  },
+  "snyk": true
 }

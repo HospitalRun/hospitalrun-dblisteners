@@ -1,0 +1,12 @@
+ignore:
+  'npm:hawk:20160119':
+    - 'follow > request > hawk':
+        reason: '?'
+        expires: '2016-05-06T14:04:08.041Z'
+patch:
+  'npm:request:20160119':
+    - 'follow > request':
+        patched: '2016-04-06T14:02:48.426Z'
+    - 'nano > follow > request':
+        patched: '2016-04-06T14:02:48.426Z'
+version: v1
