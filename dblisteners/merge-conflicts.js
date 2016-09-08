@@ -103,7 +103,7 @@ module.exports = function(change, maindb) {
   if (change.doc && change.doc._conflicts) {
     var conflicts = change.doc._conflicts;
     var currentDoc = change.doc;
-    resolveConflicts(change.id, conflicts, currentDoc, maindb, function(err) {
+    resolveConflicts(change.id, conflicts, currentDoc, function(err) {
       if (err) {
         console.log('ERROR resolving conflicts: ' + JSON.stringify(err, null, 2));
       }
