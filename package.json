@@ -1,6 +1,6 @@
 {
   "name": "hospitalrun-dblisteners",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "CouchDB listeners for HospitalRun",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "glob": "^7.0.0",
     "mkdirp": "^0.5.1",
     "nano": "^6.2.0",
+    "node-uuid": "^1.4.7",
     "snyk": "^1.13.2"
   },
   "snyk": true
