@@ -12,7 +12,7 @@ function setupFollow(config, dbName, listenersDir) {
       conflicts: true,
     },
   };
-  var dbListeners = globSync('./' + listenersDir + '/**/*.js', { cwd: __dirname }).map(require);
+  var dbListeners = globSync('./' + listenersDir + '/**/*.js', {cwd: __dirname}).map(require);
   follow(couchFollowOpts, function(error, change) {
     if (!error) {
       dbListeners.forEach(function(listener) {

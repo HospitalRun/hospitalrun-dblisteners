@@ -4,7 +4,7 @@
   "description": "CouchDB listeners for HospitalRun",
   "main": "index.js",
   "scripts": {
-    "test": "snyk test && jscs *.js dblisteners/*.js userdb-listeners/*.js",
+    "test": "snyk test && eslint *.js dblisteners/*.js userdb-listeners/*.js",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
   },
@@ -23,12 +23,11 @@
   },
   "homepage": "http://hospitalrun.io",
   "dependencies": {
-    "csv-parse": "^1.0.2",
     "follow": "^0.12.1",
     "glob": "^7.0.0",
     "mkdirp": "^0.5.1",
     "nano": "^6.2.0",
-    "node-uuid": "^1.4.7",
+    "uuid": "^3.0.1",
     "snyk": "^1.13.2"
   },
   "snyk": true

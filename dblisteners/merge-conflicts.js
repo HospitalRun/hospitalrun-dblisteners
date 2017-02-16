@@ -1,4 +1,4 @@
-var uuid = require('node-uuid');
+var uuid = require('uuid');
 /**
  * Merge conflicts by using the modifiedFields to determine who modified what last.
  * Performs a field level merge by comparing modifiedField timestamps (latest wins).
@@ -90,7 +90,7 @@ module.exports = function(change, maindb) {
       recordsToDelete.push(recordToDelete);
     }
     if (recordsToDelete.length > 0) {
-      maindb.bulk({ docs: recordsToDelete}, function(err, response) {
+      maindb.bulk({docs: recordsToDelete}, function(err, response) {
         if (err) {
           callback('Error deleting conflicting revs:' + JSON.stringify(err, null, 2));
         } else {
