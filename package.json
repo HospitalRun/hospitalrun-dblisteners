@@ -23,7 +23,7 @@
   },
   "homepage": "http://hospitalrun.io",
   "dependencies": {
-    "follow": "^0.12.1",
+    "follow": "^1.0.0",
     "glob": "^7.0.0",
     "mkdirp": "^0.5.1",
     "nano": "^6.2.0",
