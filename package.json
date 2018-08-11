@@ -1,6 +1,6 @@
 {
   "name": "hospitalrun-dblisteners",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CouchDB listeners for HospitalRun",
   "main": "index.js",
   "scripts": {
