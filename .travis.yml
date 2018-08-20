@@ -10,3 +10,4 @@ deploy:
   on:
     tags: true
     repo: HospitalRun/hospitalrun-dblisteners
+  skip_cleanup: true
