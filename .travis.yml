@@ -1,5 +1,12 @@
 language: node_js
 node_js:
-- "6"
-
+- '6'
 cache: yarn
+deploy:
+  provider: npm
+  email: apstukalin@gmail.com
+  api_key:
+    secure: Ql1az5i0Q/OadbRhr5tlkkOFYKUxH0WGYFYKzOfEtFbVGA1CHaQ7eoZAmclirFJrHX8y4Rw8yhlanMXyhZEPJpSBsRCNFmydTI6avmCCHq2ZB9ykpWJhXq5yNL3cKyLCJEbNpVwoWHbMPUu7MxHviUEpA0yUU/p/W43OaIYlSVxWzxWYzRJ5/ii4T2AhjdYJfq24VHW9nTe2CYGjtlQHx8vQ03/L4QOo6SuonOanuwETeyl2MSgrtG6A9eYQGaXL7l+GCZThG6Np/nW8AUlR2ABdtZ5F6J55209CtuoeI95Ip2Son6HWf7vhDvExHuSKxIAND1iIUa1QSoI+gXAhto1Y0C8HAy5eUCxEEywXza9AyaYsn8lYIp/gQNMpqqiSPHpOsNNBbAA4LBojf9iPPYh8G0ZOUNZDjNdepEtxwj02npPqrW4QUuNdbiWGfftz91lOvHuFdZld+PYhuMjTkZ4iRZt5hsKMeOEmfWREs22woK9tO1uc1v7dK8782CtzJyw+Z8sJ9ofVvPK1m2gbxH59ECIapjzgyvdU/0M6gAh8P2NH3PYLvmGUyYhETYWTRYwhRSlBYJNoiG23khhX7Z/4RvsSVp17+Ohm4mC9ipn4fSdmXVnsmtmPyoCHJc/152SRySmjOzoThmJ7yYoQrttX03FyzG6pfdspZwyFDYI=
+  on:
+    tags: true
+    repo: HospitalRun/hospitalrun-dblisteners
