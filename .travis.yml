@@ -5,8 +5,7 @@ cache: yarn
 deploy:
   provider: npm
   email: apstukalin@gmail.com
-  api_key:
-    secure: jgsDMSD4AHhREf2rSt78jwi3I+7FuZh1jkfQMIo/oFsl4C1rfuTrM8HGBD5hTCcaKw7D8g0sZf2DYxkCXJUS7jorsXLpCUtBVo+BAl2q9N7ZfLh5uLTqe/gdMQGPZro+KNuxIJzoyOjw5RuhX+M5ZR1AlbL0mNH1milGssV4LfFdvq+u72qxEbHwB1eBm7VN9eSHl46GXPcdPpbadPCKHArdj0lCfyG3YRbAvWbm6pvuVu341Vi2Um+/WCtoU6mRIenddqkdMHDOVRvqQpUkt+KepRoFgDZ/OmL2KkDPTo75tnlZnNb9Gqr6xNoRAoBGATBQ50etOcLTIR+fFoYMj+PO8tZ62MCdDMzeHemeiV4ZFm1n1rOG3NFKFfNHBnjQD3YVdqCvgtirXAJda5+Z8hxihitsd4s/zj/6O1iLVh7852zd1M7aeDs4bJbfnVPF/GDDmsMpWFIdrNHcQBC+RKfYIXoA/8tZhgbnjCWAtVOMciNhD7pHJScn4iF6EU4a71WT0i1LJtBYyLL+Kr822q4qmKY+Asyv+vAQ/K0JQpl/BqzOP9iNJx3x62i3c5Xnuuf/dA1sMhftgSJXr8bYocEyL4LFk9ic6WS8fDYHevHxY/iMGnFDvTyKZ0fnObFw34lU48qcmi7llGO/iDAqA3rvYAV2CqMOWua6h8U8Tzw=
+  api_key: $TEST_VAR
   on:
     tags: true
     repo: HospitalRun/hospitalrun-dblisteners
