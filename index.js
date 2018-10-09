@@ -31,7 +31,6 @@ module.exports = function (config) {
       .then((dbNames) => {
 
         var filteredDbs = dbNames.filter((value) => {
-          console.log(value + ' wef');
           return !value.startsWith('_') && value !== 'pushinfo' && value !== 'config';
         });
 
