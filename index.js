@@ -3,7 +3,7 @@ var globSync   = require('glob').sync;
 
 function setupFollow(config, dbName, listenersDir) {
   var nano = require('nano')(config.couchAuthDbURL);
-  var maindb = nano.use(dbName);
+  var db = nano.use(dbName);
   var couchFollowOpts = {
     db: config.couchAuthDbURL + '/' + dbName,
     include_docs: true,
@@ -16,13 +16,34 @@ function setupFollow(config, dbName, listenersDir) {
   follow(couchFollowOpts, function(error, change) {
     if (!error) {
       dbListeners.forEach(function(listener) {
-        listener(change, maindb, config);
+        listener(change, db, config);
       });
     }
   });
 }
 
-module.exports = function(config) {
-  setupFollow(config, 'main', 'dblisteners');
-  setupFollow(config, '_users', 'userdb-listeners');
+module.exports = function (config) {
+
+  if (config.isMultitenancy) {
+
+    var nano = require('nano')(config.couchAuthDbURL);
+    nano.db.list()
+      .then((dbNames) => {
+
+        var filteredDbs = dbNames.filter((value) => {
+          return !value.startsWith('_') && value !== 'pushinfo' && value !== 'config';
+        });
+
+        filteredDbs.forEach(function (dbName) {
+          setupFollow(config, dbName, 'dblisteners');
+        });
+
+        setupFollow(config, '_users', 'userdb-listeners');
+      });
+
+  } else {
+    setupFollow(config, 'main', 'dblisteners');
+    setupFollow(config, '_users', 'userdb-listeners');
+  }
+
 };
