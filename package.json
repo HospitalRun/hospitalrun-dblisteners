@@ -21,6 +21,7 @@
   },
   "homepage": "http://hospitalrun.io",
   "dependencies": {
+    "aws-sdk": "^2.331.0",
     "follow": "^1.0.0",
     "glob": "^7.0.0",
     "mkdirp": "^0.5.1",
