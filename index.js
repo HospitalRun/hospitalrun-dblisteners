@@ -28,9 +28,9 @@ module.exports = function (config) {
 
     var nano = require('nano')(config.couchAuthDbURL);
     nano.db.list()
-      .then((dbNames) => {
+      .then(function (dbNames) {
 
-        var filteredDbs = dbNames.filter((value) => {
+        var filteredDbs = dbNames.filter(function (value) {
           return !value.startsWith('_') && value !== 'pushinfo' && value !== 'config';
         });
 
