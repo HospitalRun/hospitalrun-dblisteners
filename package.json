@@ -29,6 +29,6 @@
     "web-push": "^3.2.2"
   },
   "devDependencies": {
-    "eslint": "^5.2.0"
+    "eslint": "^6.0.0"
   }
 }
